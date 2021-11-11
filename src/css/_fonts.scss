@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Meiryo;
+/*  src: url('/fonts/Meiryo.ttf') format('truetype');*/
+  src: url('/fonts/Meiryo.ttc') 
+}
+
+.meiryo {
+  font-family: 'Meiryo メイリオ';
+  font-weight: 400;
+}
+
+.meiryo-bold {
+  font-family: 'Meiryo メイリオ';
+  font-weight: 700;
+}
+
+.noto {
+  font-family: "Noto Sans JP" !important;
+  font-weight: 400;
+}
+
+.noto-medium {
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+}
+
+.noto-bold {
+  font-family: 'Noto Sans JP' !important;
+  font-weight: 700;
+}
+
+.poppins-light {
+  font-family: 'Poppins';
+  font-weight: 300;
+}
+
+.poppins-semi-bold {
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+.roboto-light {
+  font-family: 'Roboto';
+  font-weight: 300;
+}
+
+.roboto {
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.roboto-medium {
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.roboto-bold {
+  font-family: 'Roboto';
+  font-weight: 700;
+}
+
+.header__wrapper-overlay-menu {
+  font-family: 'Noto Sans JP';
+  font-weight: 400;
+}
+.header__wrapper-overlay-menu font{
+  font-family: 'Noto Sans JP';
+  font-weight: 400;
+}

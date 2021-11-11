@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Spark8co</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="theme-color" content="#ce5a50" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@300;600&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.scss">
+
+  <!-- Favicons & App Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/content/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="img/content/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="img/content/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="img/content/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="img/content/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="img/content/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="img/content/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/content/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="img/content/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png" />
+  <link rel="manifest" href="img/content/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
+</head>
+
+<body>
+  <div data-barba="wrapper">
+    <!-- PAGE PRELOADER -->
+    <div class="preloader text-center bg-dark-2" id="js-preloader" data-arts-theme-text="light">
+      <div class="preloader__content">
+        <!-- header -->
+        <div class="preloader__header mt-auto">
+          <div class="preloader__heading h2"><img src="img/lo_logo.svg" /></div>
+          <div class="preloader__subline small-caps mt-1 " style="letter-spacing:3px;color:#858178">Now Loading</div>
+        </div>
+        <!-- - header -->
+        <!-- counter -->
+        <div class="preloader__counter h5" style="color:#585655"><span
+            class="preloader__counter-number preloader__counter-current" style="color:#908F8D">0</span><span
+            class="preloader__counter-divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span><span
+            class="preloader__counter-number preloader__counter-total">100</span></div>
+        <!-- - counter -->
+        <!-- circle holder -->
+        <div class="preloader__circle" style="color:#696765"></div>
+        <!-- - circle holder -->
+      </div>
+    </div>
+    <!-- - PAGE PRELOADER -->
+    <!-- Loading Spinner -->
+    <svg class="spinner d-lg-none" id="js-spinner" width="65px" height="65px" viewBox="0 0 66 66"
+      xmlns="http://www.w3.org/2000/svg">
+      <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+    <!-- - Loading Spinner -->
+    <!-- Transition Curtain-->
+    <!-- TRANSITION CURTAINS -->
+    <!-- page curtain AJAX transition -->
+    <div class="curtain transition-curtain" id="js-page-transition-curtain">
+      <div class="curtain__wrapper-svg">
+        <svg class="curtain-svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Default Rectangle -->
+          <path class="curtain-svg__normal"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z">
+          </path>
+          <!-- - Default Rectangle -->
+          <!-- Curve Top -->
+          <path class="curtain-svg__curve curtain-svg__curve_top-desktop"
+            d="M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_top-mobile"
+            d="M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z">
+          </path>
+          <!-- - Curve Top -->
+          <!-- Curve Bottom -->
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-desktop"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-mobile"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z">
+          </path>
+          <!-- - Curve Bottom -->
+        </svg>
+      </div>
+    </div>
+    <!-- - page curtain AJAX transition -->
+    <!-- header curtain show/hide -->
+    <div class="header-curtain curtain" id="js-header-curtain">
+      <div class="curtain__wrapper-svg">
+        <svg class="curtain-svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Default Rectangle -->
+          <path class="curtain-svg__normal"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z">
+          </path>
+          <!-- - Default Rectangle -->
+          <!-- Curve Top -->
+          <path class="curtain-svg__curve curtain-svg__curve_top-desktop"
+            d="M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_top-mobile"
+            d="M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z">
+          </path>
+          <!-- - Curve Top -->
+          <!-- Curve Bottom -->
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-desktop"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-mobile"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z">
+          </path>
+          <!-- - Curve Bottom -->
+        </svg>
+      </div>
+    </div>
+    <!-- - header curtain show/hide -->
+    <!-- header curtain AJAX transition -->
+    <div class="header-curtain header-curtain_transition curtain" id="js-header-curtain-transition">
+      <div class="curtain__wrapper-svg">
+        <svg class="curtain-svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Default Rectangle -->
+          <path class="curtain-svg__normal"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z">
+          </path>
+          <!-- - Default Rectangle -->
+          <!-- Curve Top -->
+          <path class="curtain-svg__curve curtain-svg__curve_top-desktop"
+            d="M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_top-mobile"
+            d="M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z">
+          </path>
+          <!-- - Curve Top -->
+          <!-- Curve Bottom -->
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-desktop"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-mobile"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z">
+          </path>
+          <!-- - Curve Bottom -->
+        </svg>
+      </div>
+    </div>
+    <!-- - header curtain AJAX transition -->
+    <!-- - TRANSITION CURTAINS -->
+    <!-- Cursor Follower-->
+    <div class="cursor" id="js-cursor">
+      <div class="cursor__wrapper">
+        <!-- circles -->
+        <div class="cursor__follower">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <circle id="inner" cx="25" cy="25" r="24" style="opacity: 0.6;"></circle>
+            <circle id="outer" cx="25" cy="25" r="24"
+              style="stroke-dashoffset: 252.327; stroke-dasharray: 0px, 999999px;"></circle>
+          </svg>
+        </div>
+        <!-- - circles -->
+        <!-- arrows -->
+        <div class="cursor__arrows">
+          <div class="cursor__arrow cursor__arrow_up material-icons">keyboard_arrow_up</div>
+          <div class="cursor__arrow cursor__arrow_down material-icons">keyboard_arrow_down</div>
+          <div class="cursor__arrow cursor__arrow_left material-icons">keyboard_arrow_left</div>
+          <div class="cursor__arrow cursor__arrow_right material-icons">keyboard_arrow_right</div>
+        </div>
+        <!-- - arrows -->
+        <!-- label holder -->
+        <div class="cursor__label"></div>
+        <!-- - label holder -->
+        <!-- icon holder -->
+        <div class="cursor__icon material-icons"></div>
+        <!-- - icon holder -->
+      </div>
+    </div>
+    <!-- - Cursor Follower-->
+    <!-- PAGE HEADER -->
+    <header class="header header_menu-right header_fixed container-fluid js-header-sticky" id="page-header"
+      data-arts-theme-text="light" data-arts-header-sticky-theme="bg-white" data-arts-header-logo="secondary"
+      data-arts-header-sticky-logo="secondary" data-arts-header-overlay-theme="dark"
+      data-arts-header-overlay-background="#333">
+      <!-- top bar -->
+      <div class="header__container header__controls">
+        <div class="row justify-content-between align-items-center">
+          <!-- logo -->
+          <div class="col-auto header__col header__col-left">
+            <a class="logo" href="/" id="link-logo">
+              <div clas="logo__wrapper-img">
+                <!-- primary logo version (for light backgrounds)-->
+                <!--img class="logo__img-primary" src="img/general/logo-black.svg" alt="Rhye HTML5 Template" height="20"/-->
+                <!-- secondary logo version (for dark backgrounds)-->
+                <img class="logo__img-secondary" src="img/logo2.svg" alt="Spark & Co. Logo" />
+              </div>
+            </a>
+          </div>
+          <!-- - logo -->
+          <div class="right-side header__col">
+            <div class="roboto-bold">
+              <span class="jp spark-orange">日本語</span>
+              <span class="en">EN</span>
+            </div>
+            <!-- burger icon -->
+            <div class="col-auto">
+              <div class="header__burger" id="js-burger" data-arts-cursor="data-arts-cursor"
+                data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic"
+                data-arts-cursor-hide-native="true">
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+              </div>
+            </div>
+            <!-- - burger icon -->
+          </div>
+          <!-- "back" button for submenu nav -->
+          <div class="header__overlay-menu-back" id="js-submenu-back">
+            <div class="arrow arrow-left js-arrow arrow_mini" data-arts-cursor="data-arts-cursor"
+              data-arts-cursor-hide-native="true" data-arts-cursor-scale="0"
+              data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+              <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+              </svg>
+              <div class="arrow__pointer arrow-left__pointer"></div>
+              <div class="arrow__triangle"></div>
+            </div>
+          </div>
+          <!-- - "back" button for submenu nav -->
+        </div>
+      </div>
+      <!-- - top bar -->
+      <!-- fullscreen overlay container -->
+      <div class="header__wrapper-overlay-menu container-fluid container-fluid_paddings">
+        <!-- fullscreen menu -->
+        <div class="header__wrapper-menu">
+          <ul class="menu-overlay js-menu-overlay size-26">
+            <li class="menu-item-has-children"><a class="h2" href="/" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">HOME</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">　
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">当社について
+                </div>
+              </a>
+              <ul class="sub-menu">
+                <li class="menu-item-has-children">
+                  <a class="h3" href="#corporate-philosophy" id="linkCorporate" data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">企業理念
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item-has-children"><a class="h3" id="linkCompany" href="#company-profile"
+                    data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">会社概要
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item-has-children"><a class="h3" id="linkLocation" href="#location"
+                    data-pjax-link="overlayMenu">
+                    <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">
+                      アクセス</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkService" href="#service"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">サービス</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkMarket" href="#market-trends"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">マーケットトレンド
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkIndustry" href="#industry-occupation"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">業界・職種
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkConsultant" href="#consultant"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">コンサルタント
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkChanging" href="#changing-jobs"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">転職をお考えの方
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children d-block d-lg-none"><a href="privacy-policy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </div>
+        <!-- - fullscreen menu -->
+        <!-- fullscreen widgets -->
+        <div class="header__wrapper-overlay-widgets">
+          <div class="row justify-content-end align-items-center">
+            <!-- widget TEXT -->
+            <div class="col-12 col-lg-auto header__widget">
+              <div class="header__widget-title js-split-text split-text" data-split-text-type="lines">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+              </div>
+            </div>
+            <!-- - widget TEXT -->
+            <!-- widget TEXT -->
+            <div class="col-12 col-lg-auto header__widget">
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56.403" height="56.403" opacity=".5">
+                  <g class="A">
+                    <g>
+                      <path
+                        d="M28.2.5h0c15.298 0 27.7 12.402 27.7 27.7h0c0 15.298-12.402 27.7-27.7 27.7h0C12.902 55.9.5 43.498.5 28.2h0C.5 12.902 12.902.5 28.2.5z"
+                        fill="#dbd9d5" stroke="#dbd9d5" />
+                      <g fill="#383633">
+                        <path
+                          d="M21.335 17.006c-.001.794-.333 1.552-.915 2.091a2.86 2.86 0 0 1-2.155.754c-1.045.026-2.021-.519-2.547-1.422s-.519-2.021.019-2.917 1.521-1.428 2.566-1.388a2.85 2.85 0 0 1 2.144.78 2.86 2.86 0 0 1 .888 2.102zm-5.876 23.393v-18.3h5.689v18.3zm10.255-12.464l-.149-5.839h4.94l.262 2.508h.112a6.7 6.7 0 0 1 5.652-2.919c3.743 0 6.55 2.47 6.55 7.86v10.854H37.39V30.253c0-2.358-.824-3.967-2.882-3.967-1.323.007-2.489.87-2.882 2.133a3.91 3.91 0 0 0-.225 1.422v10.555h-5.689z" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <!-- - widget TEXT -->
+            <!-- widget TEXT -->
+            <div class="col-12 col-lg-auto header__widget">
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56.403" height="56.403" opacity=".5">
+                  <path
+                    d="M28.2.5c15.298 0 27.7 12.402 27.7 27.7h0c0 15.298-12.402 27.7-27.7 27.7S.5 43.498.5 28.2h0C.5 12.902 12.902.5 28.2.5z"
+                    fill="#dbd9d5" stroke="#dbd9d5" />
+                  <path
+                    d="M40.016 15.983h-23.08a3.54 3.54 0 0 0-3.533 3.533v2.914l12.965 9.643a3.51 3.51 0 0 0 4.216 0l12.965-9.643v-2.914a3.54 3.54 0 0 0-3.533-3.533zm1.178 5.264l-12.015 8.936a1.17 1.17 0 0 1-1.406 0l-12.015-8.937v-1.731a1.18 1.18 0 0 1 1.178-1.178h23.081a1.18 1.18 0 0 1 1.178 1.178zm0 5.87l2.355-1.752v11.579a3.54 3.54 0 0 1-3.533 3.533h-23.08a3.54 3.54 0 0 1-3.533-3.533V25.365l2.355 1.752v9.827a1.18 1.18 0 0 0 1.178 1.178h23.081a1.18 1.18 0 0 0 1.178-1.178zm0 0"
+                    fill="#383633" />
+                </svg>
+
+              </a>
+            </div>
+            <!-- - widget TEXT -->
+          </div>
+        </div>
+        <!-- - fullscreen widgets -->
+      </div>
+      <!-- - fullscreen overlay container -->
+    </header>
+    <!-- - PAGE HEADER -->
+    <!-- PAGE MAIN -->
+    <div class="js-smooth-scroll bg-dark-1" id="page-wrapper" data-barba="container">
+      <main id="top" class="page-wrapper__content">
+        <section class="top-section section-image w-100 section_h-800">
+          <div class="lazy-bg" data-src="img/pp-top-image.jpg">
+            <div class="section pt-medium">
+              <div class="row no-gutters justify-content-center">
+                <section
+                  class="section section-content clearfix d-flex justify-content-center align-items-center py-medium py-lg-0"
+                  data-arts-os-animation="data-arts-os-animation">
+                  <div class="section-content__inner w-100">
+                    <div class="w-100"></div>
+                    <div class="section__headline"></div>
+                    <div class="w-100"></div>
+                    <div class="section-content__heading js-split-text" data-split-text-type="lines,words"
+                      data-split-text-set="words" reduce-white-space>
+                      <h2 class="poppins-semi-bold size-30">PRIVACY POLICY</h2>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="section-content__text js-split-text" data-split-text-type="lines"
+                      data-split-text-set="lines">
+                      <p class="text p-0 size-13 lh-25" style="letter-spacing: 0px;">
+                        Spark&nbsp;&&nbsp;Co.株式会社（以下「当社」）は、当社のサービスをご利用いただく方（以下「利用者」）のプライバシーを尊重し、個人情報保護法および関連する法規則等を遵守し、以下に定めるプライバシーポリシーのもと、個人情報を適正かつ安全に取り扱うものとします。
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="policy section-scroll bg-gray" data-arts-default-theme="bg-gray"
+          data-arts-scroll-theme="bg-dark" data-arts-scroll-offset="-200" data-arts-scroll-trigger-hook="0.0">
+          <div class="row no-gutters justify-content-center">
+            <div class="body">
+              <div class="title">1.個人情報</div>
+              <br>
+              <div class="content">
+                個人情報とは、利用者個人に関する情報であり、当該情報を構成する氏名、住所、電話番号、メールアドレス、学校名その他の記述等により当該利用者を識別できるものを指します。EEA（European Economic
+                Area,欧州経済領域）の方がご利用になられる場合には、EU General Data Protection
+                Regulation（以下「GDPR」といいます）の適用のあるものをいいます。また、その情報のみでは識別できない場合でも、他の情報と容易に照合することができ、結果的に利用者個人を識別できるものも個人情報に含まれます。
+              </div>
+              <br>
+              <div class="title">2.個人情報の利用目的</div>
+              <br>
+              <div class="content">
+                当社は、サービスの提供にあたり、以下に定める目的の範囲内で個人情報を取得し、適切に利用・提供等を行います。また、その個人情報については安全管理、正確性の確保、各種リスクからの保護を徹底致します。<br>
+                <br>
+                <div class="indent">
+                  (1) 職業紹介、就職・転職に関する情報提供およびこれらに関連する利用者向け当社サービスの提供<br>
+                  (2) 当社サービスの利用に伴う連絡・各種お知らせ等の配信・送付<br>
+                  (3) 利用者の承諾・申込みに基づく、当社サービス利用企業・提携企業・団体等への個人情報の提供<br>
+                  (4) 当社サービスの改善・新規サービスの開発およびマーケティング<br>
+                  (5) ウェブサイトその他各種媒体等に掲載するための情報の加工、統計および分析<br>
+                  (6) お問い合わせ、ご相談および苦情への対応ならびに紛争の解決<br>
+                  (7) 当社サービスに関するご意見、お問い合わせ、セミナー・イベント・キャンペーンや当社サービスに関する情報の案内<br>
+                  (8) 求人企業の人材採用計画立案のための助言・提案
+                </div>
+              </div>
+              <br>
+              <div class="title">3.個人情報の取得、利用及び提供</div>
+              <br>
+              <div class="content">
+                当社は、個人情報につき利用者本人からご提供いただく他、一般に公開されている情報源（企業情報、業界情報、インターネット等）から取得したり、関連業界等でご活躍の方からの好意的な紹介等をいただくことにより適切に取得し、その利用及び提供を行います。特定した利用目的の達成に必要な範囲を超えて個人情報を取り扱うことはありません。<br>
+                <br>
+                取得する個人情報は、氏名、生年月日、住所、電話番号、E-mailアドレス、在留資格、職歴他、履歴書に記載されている情報等となります。<br>
+                <br>
+                なお、人種、思想・信条、本籍地（都道府県に関する情報を除く）、病歴、犯罪歴、性的指向、労働組合に関する活動等の要配慮個人情報については法令に定められた場合を除き、原則として取得いたしません。ただし、利用者が自ら提供した場合は、この限りではありません。
+              </div>
+              <br>
+              <div class="title">4.個人情報の管理</div>
+              <br>
+              <div class="content">
+                当社は、取得した個人情報への不正アクセスや、個人情報の漏えい、紛失、破壊、改ざん等に対して、必要且つ適切な防止並びに是正措置を講じます。
+              </div>
+              <br>
+              <div class="title">5.個人情報提供の任意性</div>
+              <br>
+              <div class="content">
+                必要となる情報が不足している場合、当社サービスを提供できない場合がございます。
+              </div>
+              <br>
+              <div class="title">6.統計処理されたデータの利用</div>
+              <br>
+              <div class="content">
+                当社は、提供を受けた個人情報をもとに、個人を特定できないよう加工した統計データを作成することがあります。個人を特定できない統計データについては、当社は何ら制限なく利用することができるものとします。
+              </div>
+              <br>
+              <div class="title">7.個人情報の第三者への提供</div>
+              <br>
+              <div class="content">
+                当社は、取得した個人情報は、ご本人の同意なく求人企業や第三者に開示、提供することは一切ございません。ただし、以下の場合は関係法令に反しない範囲でご本人の事前の同意なく個人情報を開示することがあります。<br>
+                <br>
+                <div class="indent">
+                  (1) 人の生命、身体又は財産の保護のために必要がある場合であって、ご利用者本人の同意を得ることが困難である場合<br>
+                  (2) 公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって、ご利用者本人の同意を得ることが困難である場合<br>
+                  (3)
+                  国の機関若しくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合で、ご利用者本人の同意を得ることによりその事務の遂行に支障を及ぼすおそれがある場合<br>
+                  (4) 裁判所、検察庁、警察、弁護士会、またはこれらに準じた権限を有する機関から、個人情報についての開示を求められた場合<br>
+                  (5) 法令により開示または提供が許容されている場合<br>
+                  (6) 合併その他の事由による事業の承継に伴い個人情報を提供する場合であって、承継前の利用目的の範囲で取り扱われる場合<br>
+                </div>
+                <br>
+                また、EEA（European Economic Area,欧州経済領域）内の利用者の個人情報に関しては、GDPRの規定に則りその個人情報を第三者に提供することがあります。
+              </div>
+              <br>
+              <div class="title">8.個人情報処理の外部委託</div>
+              <br>
+              <div class="content">
+                当社は、個人情報取扱い業務の一部または全部を外部委託することがあります。当該委託先に個人情報の開示を行う場合には、十分な個人情報保護水準を確保していることを条件として委託先を選定し、機密保持契約を結んだ上で開示します。
+              </div>
+              <br>
+              <div class="title">9.第三者提供に関する免責事項</div>
+              <br>
+              <div class="content">
+                利用者自らが当社サービスとは別の手段を使い当社サービスを利用する企業等に自身の個人情報を明らかにする場合等当社に起因しない第三者による個人情報の取得に関し、当社は何らの責任を負いません。
+              </div>
+              <br>
+              <div class="title">10.個人情報の開示、訂正、利用停止、異議の申し立て等</div>
+              <br>
+              <div class="content">
+                お預かりしている個人情報の開示、訂正、追加または削除、ならびに利用停止・制限、消去、データポタビリティ権の利用者に認められた権利行使の依頼を受けた場合は、原則として利用者本人のご依頼に限り、下記当社の個人情報に関するお問い合わせも窓口に連絡する方法により、GDPR等を含めた関連法令および当社の社内規程に従って対応します。<br>
+                また、EEA（European Economic Area,欧州経済領域）内の利用者は、当社の個人情報の取扱いに関して、GDPRの規定に則り個人情報保護監督機関に対して異議を申し立てることができます。<br>
+                しかしながら、以下の場合については個人情報の開示等の依頼に応じることが出来ない場合があります。<br>
+                <br>
+                <div class="indent">
+                  ・利用者本人または第三者の生命、身体、財産その他の権利・利益を害するおそれがある場合 <br>
+                  ・当社の業務に支障を及ぼすおそれがある場合<br>
+                  ・他の法令に違反することとなる場合、また、当該個人情報の変更等に多額の費用を要する場合､その他、個人情報の変更等を行うことが困難な場合であって、利用者の権利・利益を保護するため必要なこれに代わるべき措置をとるときは、個人情報の変更等に応じないことがあります。<br>
+                  <br>
+                  ただし、EEA（European Economic Area,欧州経済領域）の利用者からの個人情報の開示等の依頼についてはGDPRの要請に従い対応するものとします。
+                </div>
+              </div>
+              <br>
+              <div class="title">11.プライバシーポリシーの変更</div>
+              <br>
+              <div class="content">
+                当社は、本プライバシーポリシーを改定する場合があります。当社が重要な変更を行う場合は、変更が有効になる前に内容を確認することができるよう、当社のサービスまたはWEBサイトその他の方法を通じて利用者に通知します。変更内容に同意できない場合、利用者は当社のサービス利用契約を解約することができます。<br>
+                本プライバシーポリシーの変更が掲載または通知された後に本サービスを継続して使用した場合、個人情報の収集、使用および共有が更新後のプライバシーポリシーに従って行われることについて、利用者の同意があったものとみなします。<br>
+                <br>
+                個人情報に関するお問い合わせ窓口<br>
+                個人情報に関するお問い合わせは「info@spark8co.com」宛にご連絡ください。
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- PAGE FOOTER -->
+      <footer class="bg-gray">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12 links">
+              <div class="row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#home" onclick="handleLinkMenu()">HOME</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#corporate-philosophy" onclick="handleLinkMenu()">企業理念</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#company-profile" onclick="handleLinkMenu()">会社概要</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#location" onclick="handleLinkMenu()">アクセス</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#service" onclick="handleLinkMenu()">サービス</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#market-trends" onclick="handleLinkMenu()">マーケットトレンド</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#industry-occupation" onclick="handleLinkMenu()">業界･職種</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#consultant" onclick="handleLinkMenu()">コンサルタント</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="/#changing-jobs" onclick="handleLinkMenu()">転職をお考えの方</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 spark-logo d-flex justify-content-center">
+              <img src="img/logo.svg" alt="SPARK & CO." />
+            </div>
+
+            <div class="col-12 copyright roboto-light">
+              2021 © Spark & Co. Ltd.
+            </div>
+            <a href="#top" class="scroll-btn">
+              <svg xmlns="https://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 5.292 4.762">
+                <path d="M2.673.012l2.619 4.753-5.305-.008L1.33 2.385z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- - PAGE FOOTER -->
+
+    </div>
+    <!-- - PAGE MAIN -->
+  </div>
+  <canvas id="js-webgl"></canvas>
+  <!-- PhotoSwipe -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" data-arts-theme-text="light">
+    <!-- background -->
+    <div class="pswp__bg"></div>
+    <!-- - background -->
+    <!-- slider wrapper -->
+    <div class="pswp__scroll-wrap">
+      <!-- slides holder (don't modify)-->
+      <div class="pswp__container">
+        <div class="pswp__item">
+          <div class="pswp__img pswp__img--placeholder"></div>
+        </div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <!-- - slides holder (don't modify)-->
+      <!-- UI -->
+      <div class="pswp__ui pswp__ui--hidden">
+        <!-- top bar -->
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)" data-arts-cursor="data-arts-cursor"
+            data-arts-cursor-scale="1.2" data-arts-cursor-magnetic="data-arts-cursor-magnetic"
+            data-arts-cursor-hide-native="true"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen" data-arts-cursor="data-arts-cursor"
+            data-arts-cursor-scale="1.2" data-arts-cursor-magnetic="data-arts-cursor-magnetic"
+            data-arts-cursor-hide-native="true"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- - top bar -->
+        <!-- left arrow -->
+        <div class="pswp__button pswp__button--arrow--left">
+          <div class="arrow arrow-left js-arrow" data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+            data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+            <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+            </svg>
+            <div class="arrow__pointer arrow-left__pointer"></div>
+            <div class="arrow__triangle"></div>
+          </div>
+        </div>
+        <!-- - left arrow -->
+        <!-- right arrow -->
+        <div class="pswp__button pswp__button--arrow--right">
+          <div class="arrow arrow-right js-arrow" data-arts-cursor="data-arts-cursor"
+            data-arts-cursor-hide-native="true" data-arts-cursor-scale="0"
+            data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+            <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+            </svg>
+            <div class="arrow__pointer arrow-right__pointer"></div>
+            <div class="arrow__triangle"></div>
+          </div>
+        </div>
+        <!-- - right arrow -->
+        <!-- slide caption holder (don't modify) -->
+        <div class="pswp__caption">
+          <div class="pswp__caption__center text-center"></div>
+        </div>
+        <!-- - slide caption holder (don't modify) -->
+      </div>
+      <!-- - UI -->
+    </div>
+    <!-- slider wrapper -->
+  </div>
+  <!-- - PhotoSwipe -->
+
+  <!-- List Hover Shaders -->
+  <script id="list-hover-vs" type="x-shader/x-vertex">
+    uniform vec2 uOffset;
+
+      varying vec2 vUv;
+
+      vec3 deformationCurve(vec3 position, vec2 uv, vec2 offset) {
+        float M_PI = 3.1415926535897932384626433832795;
+        position.x = position.x + (sin(uv.y * M_PI) * offset.x);
+        position.y = position.y + (sin(uv.x * M_PI) * offset.y);
+        return position;
+      }
+
+      void main() {
+        vUv =  uv + (uOffset * 2.);
+        vec3 newPosition = position;
+        newPosition = deformationCurve(position,uv,uOffset);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+      }
+    </script>
+  <script id="list-hover-fs" type="x-shader/x-fragment">
+    uniform sampler2D uTexture;
+      uniform float uAlpha;
+      uniform float uScale;
+
+      varying vec2 vUv;
+
+      vec2 scaleUV(vec2 uv,float scale) {
+        float center = 0.5;
+        return ((uv - center) * scale) + center;
+      }
+
+      void main() {
+        vec3 color = texture2D(uTexture,scaleUV(vUv,uScale)).rgb;
+        gl_FragColor = vec4(color,uAlpha);
+      }
+
+    </script>
+  <!-- - List Hover Shaders -->
+  <!-- Slider Textures Shaders -->
+  <script id="slider-textures-vs" type="x-shader/x-vertex">
+    varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+      }
+    </script>
+  <script id="slider-textures-horizontal-fs" type="x-shader/x-fragment">
+    varying vec2 vUv;
+
+      uniform sampler2D texture;
+      uniform sampler2D texture2;
+      uniform sampler2D disp;
+
+      uniform float dispFactor;
+      uniform float effectFactor;
+
+      void main() {
+
+        vec2 uv = vUv;
+
+        vec4 disp = texture2D(disp, uv);
+
+        vec2 distortedPosition = vec2(uv.x + dispFactor * (disp.r*effectFactor), uv.y);
+        vec2 distortedPosition2 = vec2(uv.x - (1.0 - dispFactor) * (disp.r*effectFactor), uv.y);
+
+        vec4 _texture = texture2D(texture, distortedPosition);
+        vec4 _texture2 = texture2D(texture2, distortedPosition2);
+
+        vec4 finalTexture = mix(_texture, _texture2, dispFactor);
+
+        gl_FragColor = finalTexture;
+
+      }
+    </script>
+  <script id="slider-textures-horizontal-fs" type="x-shader/x-fragment">
+    varying vec2 vUv;
+
+      uniform sampler2D texture;
+      uniform sampler2D texture2;
+      uniform sampler2D disp;
+
+      uniform float dispFactor;
+      uniform float effectFactor;
+
+      void main() {
+
+        vec2 uv = vUv;
+
+        vec4 disp = texture2D(disp, uv);
+
+        vec2 distortedPosition = vec2(uv.x, uv.y - dispFactor * (disp.r*effectFactor));
+        vec2 distortedPosition2 = vec2(uv.x, uv.y + (1.0 - dispFactor) * (disp.r*effectFactor));
+
+        vec4 _texture = texture2D(texture, distortedPosition);
+        vec4 _texture2 = texture2D(texture2, distortedPosition2);
+
+        vec4 finalTexture = mix(_texture, _texture2, dispFactor);
+
+        gl_FragColor = finalTexture;
+
+      }
+
+    </script>
+  <!-- - Slider Textures Shaders -->
+  <!-- VENDOR SCRIPTS -->
+  <script src="js/vendor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <!-- - VENDOR SCRIPTS -->
+  <!-- COMPONENTS -->
+  <script src="js/components.js"></script>
+  <script src="js/animations.js"></script>
+  <!--script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script-->
+  <script>
+   /* AOS.init({
+      once: true
+    });*/
+    function handleLinkMenu() {
+      console.log("privacylink");
+      /*  AOS.init({
+          once: true
+        });*/
+      setTimeout(() => {
+
+        gsap.to(".section9 .frame", {
+          duration: 1.2,
+          ease: "power2.in",
+          opacity: 1,
+          scrollTrigger: {
+            trigger: document.querySelector(".section9 .frame"),
+            start: "+=0", //"top center",
+          },
+        });
+        // Consultant animation
+        gsap.to(".section13 .consultant-box", {
+          duration: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".section13 .info.section-content",
+            start: "top bottom",
+          },
+        });
+        gsap.from(".section13 .consultant", {
+          duration: 1,
+          xPercent: -10,
+          yPercent: -10,
+          scrollTrigger: {
+            trigger: ".section13 .info.section-content",
+            start: "top bottom",
+          },
+        });
+
+        gsap.from(".section13 .consultant-shadow", {
+          duration: 1,
+          xPercent: -14,
+          yPercent: -50,
+          scrollTrigger: {
+            trigger: ".section13 .info.section-content",
+            start: "top bottom",
+          },
+        });
+      }, 300);
+    }
+
+  </script>
+</body>
+
+</html>

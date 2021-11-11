@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Spark8co</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="theme-color" content="#35363A" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@300;600&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.scss">
+
+  <!-- Favicons & App Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="img/content/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="img/content/android-chrome-512x512.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="img/content/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicon-16x16.png" />
+  <link rel="manifest" href="img/content/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="img/content/ms-icon-144x144.png" />
+  <link rel="icon" type="image/x-icon" href="img/content/favicon.ico" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div data-barba="wrapper">
+    <!-- PAGE PRELOADER -->
+    <div class="preloader text-center bg-dark-2" id="js-preloader" data-arts-theme-text="light">
+      <div class="preloader__content">
+        <!-- header -->
+        <div class="preloader__header mt-auto">
+          <div class="preloader__heading h2"><img src="img/intro_logo.svg" /></div>
+          <div class="preloader__subline small-caps mt-1 " style="letter-spacing:3px;color:#858178">Now Loading</div>
+        </div>
+        <!-- - header -->
+        <!-- counter -->
+        <div class="preloader__counter h5" style="color:#585655"><span
+            class="preloader__counter-number preloader__counter-current" style="color:#908F8D">0</span><span
+            class="preloader__counter-divider">&nbsp;&nbsp;/&nbsp;&nbsp;</span><span
+            class="preloader__counter-number preloader__counter-total">100</span></div>
+        <!-- - counter -->
+        <!-- circle holder -->
+        <div class="preloader__circle" style="color:#696765"></div>
+        <!-- - circle holder -->
+      </div>
+    </div>
+    <!-- - PAGE PRELOADER -->
+    <!-- Loading Spinner -->
+    <svg class="spinner d-lg-none" id="js-spinner" width="65px" height="65px" viewBox="0 0 66 66"
+      xmlns="https://www.w3.org/2000/svg">
+      <circle class="spinner__path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+    </svg>
+    <!-- - Loading Spinner -->
+    <!-- Transition Curtain-->
+    <!-- TRANSITION CURTAINS -->
+    <!-- page curtain AJAX transition -->
+    <div class="curtain transition-curtain" id="js-page-transition-curtain">
+      <div class="curtain__wrapper-svg">
+        <svg class="curtain-svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1"
+          xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+          <!-- Default Rectangle -->
+          <path class="curtain-svg__normal"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z">
+          </path>
+          <!-- - Default Rectangle -->
+          <!-- Curve Top -->
+          <path class="curtain-svg__curve curtain-svg__curve_top-desktop"
+            d="M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_top-mobile"
+            d="M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z">
+          </path>
+          <!-- - Curve Top -->
+          <!-- Curve Bottom -->
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-desktop"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-mobile"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z">
+          </path>
+          <!-- - Curve Bottom -->
+        </svg>
+      </div>
+    </div>
+    <!-- - page curtain AJAX transition -->
+    <!-- header curtain show/hide -->
+    <div class="header-curtain curtain" id="js-header-curtain">
+      <div class="curtain__wrapper-svg">
+        <svg class="curtain-svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1"
+          xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+          <!-- Default Rectangle -->
+          <path class="curtain-svg__normal"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z">
+          </path>
+          <!-- - Default Rectangle -->
+          <!-- Curve Top -->
+          <path class="curtain-svg__curve curtain-svg__curve_top-desktop"
+            d="M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_top-mobile"
+            d="M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z">
+          </path>
+          <!-- - Curve Top -->
+          <!-- Curve Bottom -->
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-desktop"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-mobile"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z">
+          </path>
+          <!-- - Curve Bottom -->
+        </svg>
+      </div>
+    </div>
+    <!-- - header curtain show/hide -->
+    <!-- header curtain AJAX transition -->
+    <div class="header-curtain header-curtain_transition curtain" id="js-header-curtain-transition">
+      <div class="curtain__wrapper-svg">
+        <svg class="curtain-svg" viewBox="0 0 1920 1080" preserveAspectRatio="none" version="1.1"
+          xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+          <!-- Default Rectangle -->
+          <path class="curtain-svg__normal"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,0 Z">
+          </path>
+          <!-- - Default Rectangle -->
+          <!-- Curve Top -->
+          <path class="curtain-svg__curve curtain-svg__curve_top-desktop"
+            d="M0,300 C305.333333,100 625.333333,0 960,0 C1294.66667,0 1614.66667,100 1920,300 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,300 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_top-mobile"
+            d="M0,150 C305.333333,50 625.333333,0 960,0 C1294.66667,0 1614.66667,50 1920,150 L1920,1080 C1614.66667,1080 1294.66667,1080 960,1080 C625.333333,1080 305.333333,1080 0,1080 L0,150 Z">
+          </path>
+          <!-- - Curve Top -->
+          <!-- Curve Bottom -->
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-desktop"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,980 1294.66667,930 960,930 C625.333333,930 305.333333,980 0,1080 L0,0 Z">
+          </path>
+          <path class="curtain-svg__curve curtain-svg__curve_bottom-mobile"
+            d="M0,0 C305.333333,0 625.333333,0 960,0 C1294.66667,0 1614.66667,0 1920,0 L1920,1080 C1614.66667,1030 1294.66667,1005 960,1005 C625.333333,1005 305.333333,1030 0,1080 L0,0 Z">
+          </path>
+          <!-- - Curve Bottom -->
+        </svg>
+      </div>
+    </div>
+    <!-- - header curtain AJAX transition -->
+    <!-- - TRANSITION CURTAINS -->
+    <!-- Cursor Follower-->
+    <div class="cursor" id="js-cursor">
+      <div class="cursor__wrapper">
+        <!-- circles -->
+        <div class="cursor__follower">
+          <svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+            <circle id="inner" cx="25" cy="25" r="24" style="opacity: 0.6;"></circle>
+            <circle id="outer" cx="25" cy="25" r="24"
+              style="stroke-dashoffset: 252.327; stroke-dasharray: 0px, 999999px;"></circle>
+          </svg>
+        </div>
+        <!-- - circles -->
+        <!-- arrows -->
+        <div class="cursor__arrows">
+          <div class="cursor__arrow cursor__arrow_up material-icons">keyboard_arrow_up</div>
+          <div class="cursor__arrow cursor__arrow_down material-icons">keyboard_arrow_down</div>
+          <div class="cursor__arrow cursor__arrow_left material-icons">keyboard_arrow_left</div>
+          <div class="cursor__arrow cursor__arrow_right material-icons">keyboard_arrow_right</div>
+        </div>
+        <!-- - arrows -->
+        <!-- label holder -->
+        <div class="cursor__label"></div>
+        <!-- - label holder -->
+        <!-- icon holder -->
+        <div class="cursor__icon material-icons"></div>
+        <!-- - icon holder -->
+      </div>
+    </div>
+    <!-- - Cursor Follower-->
+    <!-- PAGE HEADER -->
+    <header class="header header_menu-right header_fixed container-fluid js-header-sticky" id="page-header"
+      data-arts-theme-text="light" data-arts-header-sticky-theme="bg-white" data-arts-header-logo="secondary"
+      data-arts-header-sticky-logo="secondary" data-arts-header-overlay-theme="dark"
+      data-arts-header-overlay-background="#333">
+      <!-- top bar -->
+      <div class="header__container header__controls">
+        <div class="row justify-content-between align-items-center">
+          <!-- logo -->
+          <div class="col-auto header__col header__col-left">
+            <a class="logo" href="#" id="link-logo">
+              <div clas="logo__wrapper-img">
+                <!-- primary logo version (for light backgrounds)-->
+                <!--img class="logo__img-primary" src="img/general/logo-black.svg" alt="Rhye HTML5 Template" height="20"/-->
+                <!-- secondary logo version (for dark backgrounds)-->
+                <img class="logo__img-secondary" src="img/logo-2.png" alt="Spark & Co. Logo" />
+              </div>
+            </a>
+          </div>
+          <!-- - logo -->
+          <div class="right-side header__col">
+            <div class="roboto-bold right-en-jp">
+              <span class="jp spark-orange">日本語</span>
+              <span style="cursor: pointer;" class="en"><a style="color: #423f3f;" href="/en.html">EN</a></span>
+            </div>
+            <!-- burger icon -->
+            <div class="col-auto">
+              <div class="header__burger" id="js-burger" data-arts-cursor="data-arts-cursor"
+                data-arts-cursor-scale="1.7" data-arts-cursor-magnetic="data-arts-cursor-magnetic"
+                data-arts-cursor-hide-native="true">
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+                <div class="header__burger-line"></div>
+              </div>
+            </div>
+            <!-- - burger icon -->
+          </div>
+          <!-- "back" button for submenu nav -->
+          <div class="header__overlay-menu-back" id="js-submenu-back">
+            <div class="arrow arrow-left js-arrow arrow_mini" data-arts-cursor="data-arts-cursor"
+              data-arts-cursor-hide-native="true" data-arts-cursor-scale="0"
+              data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+              <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                xmlns:xlink="https://www.w3.org/1999/xlink">
+                <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+              </svg>
+              <div class="arrow__pointer arrow-left__pointer"></div>
+              <div class="arrow__triangle"></div>
+            </div>
+          </div>
+          <!-- - "back" button for submenu nav -->
+        </div>
+      </div>
+      <!-- - top bar -->
+      <!-- fullscreen overlay container -->
+      <div class="header__wrapper-overlay-menu container-fluid container-fluid_paddings mt-3">
+        <!-- fullscreen menu -->
+        <div class="header__wrapper-menu mt-5">
+          <ul class="menu-overlay js-menu-overlay size-26">
+            <li class="menu-item-has-children"><a class="h2" href="/" data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">HOME</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" href="#" data-pjax-link="overlayMenu">　
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">当社について
+                </div>
+              </a>
+              <ul class="sub-menu">
+                <li class="menu-item-has-children">
+                  <a class="h3" href="#corporate-philosophy" id="linkCorporate" data-pjax-link="overlayMenu"
+                    >
+                    <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">企業理念
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item-has-children"><a class="h3" id="linkCompany" href="#company-profile"
+                    data-pjax-link="overlayMenu" >
+                    <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">会社概要
+                    </div>
+                  </a>
+                </li>
+                <li class="menu-item-has-children"><a class="h3" id="linkLocation" href="#location"
+                    data-pjax-link="overlayMenu" >
+                    <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">
+                      アクセス</div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkService" href="#service"
+                data-pjax-link="overlayMenu" >
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">サービス</div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkMarket" href="#market-trends"
+                data-pjax-link="overlayMenu" >
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">マーケットトレンド
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkIndustry" href="#industry-occupation"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">業界・職種
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkConsultant" href="#consultant"
+                data-pjax-link="overlayMenu" onclick="handleLinkMenu()">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">コンサルタント
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children"><a class="h2" id="linkChanging" href="#changing-jobs"
+                data-pjax-link="overlayMenu">
+                <div class="menu-overlay__item-wrapper split-text js-split-text" data-split-text-type="lines">転職をお考えの方
+                </div>
+              </a>
+            </li>
+            <li class="menu-item-has-children d-block d-lg-none"><a href="privacy-policy.html">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </div>
+        <!-- - fullscreen menu -->
+        <!-- fullscreen widgets -->
+        <div class="header__wrapper-overlay-widgets">
+          <div class="row justify-content-end align-items-center d-lg-flex d-none">
+            <!-- widget TEXT -->
+            <div class="col-12 col-lg-auto header__widget">
+              <div class="header__widget-title js-split-text split-text" data-split-text-type="lines">
+                <a href="./privacy-policy.html">プライバシーポリシー</a>
+              </div>
+            </div>
+            <!-- - widget TEXT -->
+            <!-- widget TEXT -->
+            <div class="col-12 col-lg-auto header__widget">
+              <a class="svg-size" href="">
+                <svg class="svg-box" xmlns="https://www.w3.org/2000/svg" width="50" height="50" opacity=".5"
+                  viewBox="0 0 65 65">
+                  <g class="A">
+                    <g>
+                      <path
+                        d="M28.2.5h0c15.298 0 27.7 12.402 27.7 27.7h0c0 15.298-12.402 27.7-27.7 27.7h0C12.902 55.9.5 43.498.5 28.2h0C.5 12.902 12.902.5 28.2.5z"
+                        fill="#dbd9d5" stroke="#dbd9d5" />
+                      <g fill="#383633">
+                        <path
+                          d="M21.335 17.006c-.001.794-.333 1.552-.915 2.091a2.86 2.86 0 0 1-2.155.754c-1.045.026-2.021-.519-2.547-1.422s-.519-2.021.019-2.917 1.521-1.428 2.566-1.388a2.85 2.85 0 0 1 2.144.78 2.86 2.86 0 0 1 .888 2.102zm-5.876 23.393v-18.3h5.689v18.3zm10.255-12.464l-.149-5.839h4.94l.262 2.508h.112a6.7 6.7 0 0 1 5.652-2.919c3.743 0 6.55 2.47 6.55 7.86v10.854H37.39V30.253c0-2.358-.824-3.967-2.882-3.967-1.323.007-2.489.87-2.882 2.133a3.91 3.91 0 0 0-.225 1.422v10.555h-5.689z" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <!-- - widget TEXT -->
+            <!-- widget TEXT -->
+            <div class="col-12 col-lg-auto header__widget">
+              <a href="">
+                <svg xmlns="https://www.w3.org/2000/svg" width="50" height="50" opacity=".5" viewBox="0 0 65 65">
+                  <path
+                    d="M28.2.5c15.298 0 27.7 12.402 27.7 27.7h0c0 15.298-12.402 27.7-27.7 27.7S.5 43.498.5 28.2h0C.5 12.902 12.902.5 28.2.5z"
+                    fill="#dbd9d5" stroke="#dbd9d5" />
+                  <path
+                    d="M40.016 15.983h-23.08a3.54 3.54 0 0 0-3.533 3.533v2.914l12.965 9.643a3.51 3.51 0 0 0 4.216 0l12.965-9.643v-2.914a3.54 3.54 0 0 0-3.533-3.533zm1.178 5.264l-12.015 8.936a1.17 1.17 0 0 1-1.406 0l-12.015-8.937v-1.731a1.18 1.18 0 0 1 1.178-1.178h23.081a1.18 1.18 0 0 1 1.178 1.178zm0 5.87l2.355-1.752v11.579a3.54 3.54 0 0 1-3.533 3.533h-23.08a3.54 3.54 0 0 1-3.533-3.533V25.365l2.355 1.752v9.827a1.18 1.18 0 0 0 1.178 1.178h23.081a1.18 1.18 0 0 0 1.178-1.178zm0 0"
+                    fill="#383633" />
+                </svg>
+
+              </a>
+            </div>
+            <!-- - widget TEXT -->
+          </div>
+
+          <div class="row d-block d-lg-none">
+            <!-- widget TEXT -->
+            <!-- <div class="col-md-12">
+              <div class="header__widget-title js-split-text split-text" data-split-text-type="lines">
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+              </div>
+            </div> -->
+          </div>
+          <!-- - widget TEXT -->
+          <!-- widget TEXT -->
+          <div class="row justify-content-center d-block d-lg-none">
+            <div class="d-inline-block">
+              <a class="svg-size" href="">
+                <svg class="svg-box" xmlns="https://www.w3.org/2000/svg" width="50" height="50" opacity=".5"
+                  viewBox="0 0 65 65">
+                  <g class="A">
+                    <g>
+                      <path
+                        d="M28.2.5h0c15.298 0 27.7 12.402 27.7 27.7h0c0 15.298-12.402 27.7-27.7 27.7h0C12.902 55.9.5 43.498.5 28.2h0C.5 12.902 12.902.5 28.2.5z"
+                        fill="#dbd9d5" stroke="#dbd9d5" />
+                      <g fill="#383633">
+                        <path
+                          d="M21.335 17.006c-.001.794-.333 1.552-.915 2.091a2.86 2.86 0 0 1-2.155.754c-1.045.026-2.021-.519-2.547-1.422s-.519-2.021.019-2.917 1.521-1.428 2.566-1.388a2.85 2.85 0 0 1 2.144.78 2.86 2.86 0 0 1 .888 2.102zm-5.876 23.393v-18.3h5.689v18.3zm10.255-12.464l-.149-5.839h4.94l.262 2.508h.112a6.7 6.7 0 0 1 5.652-2.919c3.743 0 6.55 2.47 6.55 7.86v10.854H37.39V30.253c0-2.358-.824-3.967-2.882-3.967-1.323.007-2.489.87-2.882 2.133a3.91 3.91 0 0 0-.225 1.422v10.555h-5.689z" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <!-- - widget TEXT -->
+            <!-- widget TEXT -->
+            <div class="d-inline-block">
+              <a href="">
+                <svg xmlns="https://www.w3.org/2000/svg" width="50" height="50" opacity=".5" viewBox="0 0 65 65">
+                  <path
+                    d="M28.2.5c15.298 0 27.7 12.402 27.7 27.7h0c0 15.298-12.402 27.7-27.7 27.7S.5 43.498.5 28.2h0C.5 12.902 12.902.5 28.2.5z"
+                    fill="#dbd9d5" stroke="#dbd9d5" />
+                  <path
+                    d="M40.016 15.983h-23.08a3.54 3.54 0 0 0-3.533 3.533v2.914l12.965 9.643a3.51 3.51 0 0 0 4.216 0l12.965-9.643v-2.914a3.54 3.54 0 0 0-3.533-3.533zm1.178 5.264l-12.015 8.936a1.17 1.17 0 0 1-1.406 0l-12.015-8.937v-1.731a1.18 1.18 0 0 1 1.178-1.178h23.081a1.18 1.18 0 0 1 1.178 1.178zm0 5.87l2.355-1.752v11.579a3.54 3.54 0 0 1-3.533 3.533h-23.08a3.54 3.54 0 0 1-3.533-3.533V25.365l2.355 1.752v9.827a1.18 1.18 0 0 0 1.178 1.178h23.081a1.18 1.18 0 0 0 1.178-1.178zm0 0"
+                    fill="#383633" />
+                </svg>
+
+              </a>
+            </div>
+            <!-- - widget TEXT -->
+          </div>
+        </div>
+        <!-- - fullscreen widgets -->
+      </div>
+      <!-- - fullscreen overlay container -->
+    </header>
+    <!-- - PAGE HEADER -->
+    <!-- PAGE MAIN -->
+    <div class="js-smooth-scroll bg-dark-1" id="page-wrapper" data-barba="container">
+      <main id="top" class="page-wrapper__content">
+        <!-- section MASTHEAD -->
+        <section class="section section-masthead d-none" data-background-color="var(--color-dark-1)"></section>
+        <!-- - section MASTHEAD -->
+        <!-- section PROJECTS SLIDER FULLSCREEN -->
+
+        <section
+          class="section section-fullheight section-projects section-projects-slider bg-dark-1 overflow bg-white "
+          data-arts-theme-text="light" data-arts-os-animation>
+
+          <div class="section-fullheight__inner section-fullheight__inner_mobile text-left">
+
+            <div class="slider slider-fullscreen-projects js-slider-fullscreen-projects js-slider">
+
+              <!-- slider CONTENT -->
+              <div class="swiper-container js-slider-fullscreen-projects__content">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide1">
+                    <h2 class="h1 slider__heading js-split-text roboto-bold" data-split-text-type="lines, words, chars"
+                      reduce-white-space>
+                      <div>FIND</div>
+                      <div>YOUR</div>
+                      <div>SPARK</div>
+                    </h2>
+                    <div class="section-content__inner">
+                      <div class="w-100"></div>
+                      <div class="section__headline"></div>
+                      <div class="w-100"></div>
+                    </div>
+                    <div class="slider__subheading subheading js-split-text split-text mb-1 noto"
+                      data-split-text-type="lines, words, chars" data-split-text-set="chars" reduce-white-space>
+                      <div>未来を築く企業・リーダーの<br>エグゼクティブサーチ</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slide2">
+                    <h2 class="h1 slider__heading js-split-text roboto-bold" data-split-text-type="lines, words, chars"
+                      reduce-white-space>
+                      <div>FIND</div>
+                      <div>YOUR</div>
+                      <div>SPARK</div>
+                    </h2>
+                    <div class="section-content__inner">
+                      <div class="w-100"></div>
+                      <div class="section__headline"></div>
+                      <div class="w-100"></div>
+                    </div>
+                    <div class="slider__subheading subheading js-split-text split-text mb-1 noto"
+                      data-split-text-type="lines, words, chars" data-split-text-set="chars" reduce-white-space>
+                      <div>ビジネスリーダーの<br>戦略的キャリア支援</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slide3">
+                    <h2 class="h1 slider__heading js-split-text roboto-bold" data-split-text-type="lines, words, chars"
+                      reduce-white-space>
+                      <div>FIND</div>
+                      <div>YOUR</div>
+                      <div>SPARK</div>
+                    </h2>
+                    <div class="section-content__inner">
+                      <div class="w-100"></div>
+                      <div class="section__headline"></div>
+                      <div class="w-100"></div>
+                    </div>
+                    <div class="slider__subheading subheading js-split-text split-text mb-1 noto"
+                      data-split-text-type="lines, words, chars" data-split-text-set="chars" reduce-white-space>
+                      <div>人と企業の価値ある出会いから<br>更なる可能性をサポート</div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide slide4">
+                    <h2 class="h1 slider__heading js-split-text roboto-bold" data-split-text-type="lines, words, chars"
+                      reduce-white-space>
+                      <div>FIND</div>
+                      <div>YOUR</div>
+                      <div>SPARK</div>
+                    </h2>
+                    <div class="section-content__inner">
+                      <div class="w-100"></div>
+                      <div class="section__headline"></div>
+                      <div class="w-100"></div>
+                    </div>
+                    <div class="slider__subheading subheading js-split-text split-text mb-1 noto"
+                      data-split-text-type="lines, words, chars" data-split-text-set="chars" reduce-white-space>
+                      <div>洞察力を活かしたアドバイスの提供や<br>グローバル人材支援による組織改革のサポート</div>
+                    </div>
+                  </div>
+
+                  <!--div class="swiper-slide slide5">
+                    <h2 class="h1 slider__heading js-split-text roboto-bold" data-split-text-type="lines, words, chars" reduce-white-space>
+                      <div>FIND</div>
+                      <div>YOUR</div>
+                      <div>SPARK</div>
+                    </h2>
+                    <div class="section-content__inner">
+                      <div class="w-100"></div>
+                      <div class="section__headline"></div>
+                      <div class="w-100"></div>
+                    </div>
+                    <div class="slider__subheading subheading js-split-text split-text mb-1 meiryo"
+                      data-split-text-type="lines, words, chars" data-split-text-set="chars" reduce-white-space>
+                      <div>魅力的ポジションと<br>洞察力を活かしたアドバイス</div>
+                    </div>
+                  </div-->
+
+                  <div class="swiper-slide slide6">
+                    <h2 class="h1 slider__heading js-split-text roboto-bold" data-split-text-type="lines, words, chars"
+                      reduce-white-space>
+                      <div>FIND</div>
+                      <div>YOUR</div>
+                      <div>SPARK</div>
+                    </h2>
+                    <div class="section-content__inner">
+                      <div class="w-100"></div>
+                      <div class="section__headline"></div>
+                      <div class="w-100"></div>
+                    </div>
+                    <div class="slider__subheading subheading js-split-text split-text mb-1 noto"
+                      data-split-text-type="lines, words, chars" data-split-text-set="chars" reduce-white-space>
+                      <div>革新的企業とビジネスリーダーの懸け橋となり<br>社会づくりに貢献いたします。</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- - slider CONTENT -->
+
+              <!-- slider IMAGES -->
+              <div
+                class="swiper-container slider-fullscreen-projects__images js-slider-fullscreen-projects__images lazyload"
+                data-mousewheel-enabled="data-mousewheel-enabled" data-direction="horizontal"
+                data-transition-effect="distortion" data-aspect-ratio="1.5"
+                data-transition-displacement-img="img/general/bg-displacement-16.jpg" data-speed="6000"
+                data-autoplay-enabled="yes" data-autoplay-delay="9000" data-counter-style="roman">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide overflow">
+                    <div class="slider__images-slide-inner js-transition-img overflow" data-swiper-parallax="90%"
+                      data-swiper-parallax-opacity="0">
+                      <div class="slider__bg js-transition-img__transformed-el" data-texture-src="img/T_1.jpg">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide overflow">
+                    <div class="slider__images-slide-inner js-transition-img overflow" data-swiper-parallax="90%"
+                      data-swiper-parallax-opacity="0">
+                      <div class="slider__bg js-transition-img__transformed-el" data-texture-src="img/T_2.jpg">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide overflow">
+                    <div class="slider__images-slide-inner js-transition-img overflow" data-swiper-parallax="90%"
+                      data-swiper-parallax-opacity="0">
+                      <div class="slider__bg js-transition-img__transformed-el" data-texture-src="img/T_3.jpg">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide overflow">
+                    <div class="slider__images-slide-inner js-transition-img overflow" data-swiper-parallax="90%"
+                      data-swiper-parallax-opacity="0">
+                      <div class="slider__bg js-transition-img__transformed-el" data-texture-src="img/T_4.jpg">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--div class="swiper-slide overflow">
+                    <div class="slider__images-slide-inner js-transition-img overflow" data-swiper-parallax="90%"
+                      data-swiper-parallax-opacity="0">
+                      <div class="slider__bg lazy-bg js-transition-img__transformed-el"
+                        data-texture-src="img/T_5.jpg">
+                      </div>
+                    </div>
+                  </div-->
+
+                  <div class="swiper-slide overflow">
+                    <div class="slider__images-slide-inner js-transition-img overflow" data-swiper-parallax="90%"
+                      data-swiper-parallax-opacity="0">
+                      <div class="slider__bg js-transition-img__transformed-el" data-texture-src="img/T_6.jpg">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- overlay -->
+                <!-- <div class="slider__overlay overlay overlay_circle-dark overlay_deither"></div> -->
+                <!-- <div class="slider__circle"></div> -->
+                <!-- - overlay -->
+              </div>
+              <!-- - slider IMAGES -->
+              <!-- slider FOOTER -->
+              <div class="slider-fullscreen-projects__footer swiper-container js-slider-fullscreen-projects__footer">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide">
+                    <div class="slider__wrapper-button-footer"><a class="button button_dark button_bordered"
+                        data-hover="EN / 日本語" target="_blank" href="en.html" data-pjax-link="fullscreenSlider"><span
+                          class="button__label-hover"><span style="font-weight:bold;color:#CE5A50">日本語</span> /
+                          EN</span></a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- - slider FOOTER -->
+              <!-- slider COUNTER -->
+              <!--div class="slider__wrapper-counter slider-fullscreen-projects__counter">
+                  <div class="slider__counter slider__counter_current">
+                    <div class="">
+                      <div class="swiper-wrapper"><a href="/">EN</a></div>
+                    </div>
+                  </div>
+                  <div class="slider__counter-divider slider-fullscreen__counter-divider"></div>
+                  <div class="slider__counter slider__counter_total "><a href="/">JP</a></div>
+                </div-->
+              <!-- slider COUNTER -->
+              <div class="slider__wrapper-counter slider-fullscreen-projects__counter" style="display:none">
+                <div class="slider__counter slider__counter_current">
+                  <div class="js-slider-fullscreen-projects__counter-current swiper-container">
+                    <div class="swiper-wrapper"></div>
+                  </div>
+                </div>
+                <div class="slider__counter-divider slider-fullscreen__counter-divider"></div>
+                <div class="slider__counter slider__counter_total js-slider-fullscreen-projects__counter-total"></div>
+              </div>
+              <!-- - slider COUNTER -->
+              <!-- - slider COUNTER -->
+              <!-- slider ARROWS -->
+              <!--div class="slider__arrow slider__arrow_left slider__arrow_absolute js-slider__arrow-prev">
+                  <div class="arrow arrow-left js-arrow" data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true" data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                    <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                      <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                    </svg>
+                    <div class="arrow__pointer arrow-left__pointer"></div>
+                    <div class="arrow__triangle"></div>
+                  </div>
+                </div-->
+              <div class="slider__arrow slider__arrow_right slider__arrow_absolute js-slider__arrow-next">
+                <div class="arrow arrow-right js-arrow" data-arts-cursor="data-arts-cursor"
+                  data-arts-cursor-hide-native="true" data-arts-cursor-scale="0"
+                  data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                  <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                    xmlns:xlink="https://www.w3.org/1999/xlink">
+                    <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                  </svg>
+                  <div class="arrow__pointer arrow-right__pointer"></div>
+                  <div class="arrow__triangle"></div>
+                </div>
+              </div>
+              <!-- - slider ARROWS -->
+              <!-- - slider Scrolldown-->
+              <div class="section-masthead__wrapper-scroll-down section-masthead__wrapper-scroll-down_right"
+                style="z-index:300">
+                <div class="circle-button js-circle-button" data-arts-os-animation="true">
+                  <!-- curved label -->
+                  <div class="circle-button__outer">
+                    <div class="circle-button__wrapper-label">
+                      <div class="circle-button__label small-caps" style="color:#FFFFFF">SCROLL</div>
+                    </div>
+                  </div>
+                  <!-- - curved label -->
+                  <!-- geometry wrapper -->
+                  <div class="circle-button__inner">
+                    <div class="circle-button__circle" data-arts-scroll-down="data-arts-scroll-down"
+                      data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0">
+                      <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                        xmlns:xlink="https://www.w3.org/1999/xlink">
+                        <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                      </svg>
+                    </div>
+                    <!-- browsers with touch support -->
+                    <div class="circle-button__icon circle-button__icon-touch">
+                      <svg enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512"
+                        xmlns="https://www.w3.org/2000/svg">
+                        <path
+                          d="m32 8c-1.104 0-2 .896-2 2v39.899l-14.552-15.278c-.761-.799-2.026-.832-2.828-.069-.8.762-.831 2.027-.069 2.827l16.62 17.449c.756.756 1.76 1.172 2.829 1.172 1.068 0 2.073-.416 2.862-1.207l16.586-17.414c.762-.8.73-2.065-.069-2.827-.799-.763-2.065-.731-2.827.069l-14.552 15.342v-39.963c0-1.104-.896-2-2-2z">
+                        </path>
+                      </svg>
+                    </div>
+                    <!-- - browsers with touch support -->
+                    <!-- - browsers without touch support -->
+                    <div class="circle-button__icon circle-button__icon-mouse">
+                      <svg class="svg-mouse" width="23px" height="35px" viewBox="0 0 23 35" version="1.1"
+                        xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                        <!-- border -->
+                        <path class="svg-mouse__border"
+                          d="M 11.5,0 C 5.1587513,0 0,5.2313534 0,11.661011 V 23.339654 C 0,29.769146 5.1587513,35 11.5,35 17.841249,35 23,29.769312 23,23.339654 V 11.661011 C 23,5.2313534 17.841085,0 11.5,0 Z">
+                        </path>
+                        <!-- - border -->
+                        <!-- wheel -->
+                        <path class="svg-mouse__wheel"
+                          d="M11.5,4 C11.2238902,4 11,4.28321727 11,4.63321727 L11,10.3667827 C11,10.7167827 11.2238902,11 11.5,11 C11.7761098,11 12,10.7167827 12,10.3667827 L12,4.63321727 C11.9998717,4.28321727 11.7761098,4 11.5,4 Z">
+                        </path>
+                        <!-- - wheel -->
+                      </svg>
+                    </div>
+                    <!-- - browsers without touch support -->
+                  </div>
+                  <!-- - geometry wrapper -->
+                </div>
+              </div>
+              <!-- slider Scrolldown-->
+              <!-- slider CANVAS -->
+              <div class="slider__wrapper-canvas">
+                <div class="slider__wrapper-canvas-inner">
+                  <canvas class="slider__canvas"></canvas>
+                </div>
+              </div>
+              <!-- - slider CANVAS -->
+            </div>
+          </div>
+        </section>
+        <!-- - section PROJECTS SLIDER FULLSCREEN -->
+        <div class="bg-white" style="min-height:70px" id="corporate-philosophy">
+        </div>
+        <!-- section 1 -->
+        <div class="section1 section bg-white">
+          <div class="box">
+            <div class="box-img">
+              <!-- <h1>tes</h1> -->
+              <img src="./img/meeting-room.png" class="img-meeting-room" alt="Meeting room">
+            </div>
+            <div class="box-desc">
+              <div class="box-description__content">
+                <div class="title text-animation">
+                  <div class=" w-100"></div>
+                  <div class="section__headline"></div>
+                  <div class="w-100"></div>
+                  <h2 class="noto-bold split-text js-split-text" data-split-text-type="lines,words"
+                    data-split-text-set="words">企 業 理 念</h2>
+                </div>
+                <div class="description text-animation">
+                  <p class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                    スパーク・アンド・カンパニーでは、 革新的な企業と有能なリーダーやスペシャリストを 橋渡しすることで、クライアントの変革を 推進させ生産性向上・企業価値向上の支援を 通じた貢献を理念といたします。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="line-bottom"></div>
+          </div>
+        </div>
+        <!-- /section 1 -->
+
+        <!-- section 2 -->
+        <section class="section2 section section-image section-contents" id="company-profile">
+          <div class="section-image section d-none d-lg-block" style="--aspect-ratio: 1920/540">
+            <div class="section-image__wrapper js-transition-img">
+              <div data-src="img/stairs.png" class="lazy-bg"></div>
+            </div>
+          </div>
+
+          <div class="section-image section d-lg-none" style="--aspect-ratio: 1500/680">
+            <div class="section-image__wrapper js-transition-img">
+              <div data-src="img/stairs.png" class="lazy-bg"></div>
+            </div>
+          </div>
+        </section>
+        <!-- /section 2 -->
+
+        <!-- section 3 -->
+        <section class="section3 section section-properties section-content pb-medium">
+          <div class="row no-gutters flex-column flex-xl-row">
+            <div class="profile noto-bold section-content__inner">
+              <!--<div class="w-100"></div>
+              <div class="section__headline"></div>
+              <div class="w-100"></div>
+              <div class="section-content__heading split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                会 社 概 要
+              </div>-->
+            </div>
+
+            <div class="info d-flex flex-wrap">
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  会社名
+                </div>
+
+                <div class="text">
+                  Spark & Co.株式会社<br>
+                  (スパーク・アンド・カンパニー)
+                </div>
+              </div>
+
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  代表取締役　　　　
+                </div>
+                <div class="text">
+                  朴　成太
+                </div>
+              </div>
+
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  主な事業内容
+                </div>
+                <div class="text">
+                  エグゼクティブサーチ<br>
+                  リクルートメント<br>
+                  人材採用のためのサポート・コンサルティング
+                </div>
+              </div>
+
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  所在地
+                </div>
+                <div class="text">
+                  〒100-6162<br>
+                  東京都千代田区永田町2-11-1<br>
+                  山王パークタワー3階
+                </div>
+              </div>
+
+              <div class="w-100"></div>
+
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  TEL
+                </div>
+                <div class="text">
+                  (03) 6205-3146
+                </div>
+              </div>
+
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  FAX
+                </div>
+                <div class="text">
+                  (03) 6205-3100
+                </div>
+              </div>
+
+              <div class="info-section split-text js-split-text" data-split-text-type="lines,words"
+                data-split-text-set="words" data-reduce-white-space>
+                <div class="text-header meiryo-bold">
+                  E-mail
+                </div>
+                <span class="email meiryo-bold">info@spark8co.com</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /section 3 -->
+        <div style="min-height:70px;background-color:#444" id="location">
+        </div>
+        <!-- section 4 -->
+        <section class="section4 section overflow bg-white pb-medium">
+          <div class="map-wrapper">
+            <div id="map-overlay" style="z-index: 1000;position: absolute; width:100%;height:100%;"></div>
+            <iframe id="google-map"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1620.5977767600814!2d139.73936274127468!3d35.6721866!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x62d085252613e99f!2sSanno%20Park%20Tower!5e0!3m2!1sen!2ssg!4v1619625486121!5m2!1sen!2ssg"
+              allowfullscreen title="Map" loading="lazy">
+            </iframe>
+          </div>
+          <div class="text-animation bg-white pb-medium">
+            <div class="row no-gutters justify-content-start justify-content-lg-center">
+              <div class="">
+                <div class="section-content__inner">
+                  <div class="w-60"></div>
+                  <div class="section__headline mb-1 mb-md-2"></div>
+                  <div class="w-100"></div>
+
+                  <div class="section-content__heading split-text js-split-text mb-1" data-split-text-type="lines,words"
+                    data-split-text-set="words">
+                    <h2 class="noto-bold">アクセス</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="section-content__inner">
+                <div class="w-100"></div>
+                <div class="section-content__text">
+
+                  <!--div class="access meiryo-bold split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines">アクセス</div-->
+                  <div class="stations">
+                    <span class="d-flex align-items-center flex-nowrap split-text js-split-text"
+                      data-split-text-type="lines" data-split-text-set="lines">
+                      <img src="img/icon_namboku.png" alt=""
+                        class="icon align-self-start" /><span>東京メトロ銀座線・南北線「溜池山王駅」直結</span><br>
+                    </span>
+                    <span class="d-flex align-items-center split-text js-split-text" data-split-text-type="lines"
+                      data-split-text-set="lines">
+                      <img src="img/icon_chiyoda.png" alt=""
+                        class="icon align-self-start" /><span>東京メトロ丸ノ内線・千代田線「国会議事堂前駅」直結</span>
+                    </span>
+                  </div>
+                  <div class="address split-text js-split-text size-13" data-split-text-type="lines"
+                    data-split-text-set="lines">
+                    〒100-6162　<br class="d-lg-none">東京都千代田区永田町2-11-1　山王パークタワー3階
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footsteps-wrapper">
+            <img src="./img/footsteps.png" alt="">
+          </div>
+        </section>
+        <!-- /section 4 -->
+        <div style="min-height:70px;background-color:#ecebe8" id="service">
+        </div>
+        <!-- section 5 -->
+        <div class="section5 container-fluid no-gutters bg-white">
+          <div class="row no-gutters align-items-center">
+            <div class="col-lg-6">
+              <section class="section section-image">
+                <div class="section-image__wrapper">
+                  <div>
+                    <div class="lazy-bg" data-src="img/service.png"
+                      style="--aspect-ratio: 960/1050;    background-position-y: -25px;"></div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="service col-lg-6 d-flex align-items-center align-self-stretch">
+              <section
+                class="section section-content text service-section-top  container-fluid container-fluid_paddings"
+                data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                  <div class="w-100"></div>
+                  <div class="section__headline"></div>
+                  <div class="w-100"></div>
+                  <div class="section-content__heading mb-1">
+                    <h2 class="poppins-semi-bold">SERVICE</h2>
+                  </div>
+                  <div class="w-100"></div>
+                  <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                    data-split-text-set="lines" reduce-white-space>
+                    ハイスキル人材、且つ時代の変化に適応できる人材をご紹介することにより
+
+                    貴社の成長に貢献し、同時に長期的・戦略的ビジネスパートナーとして
+                    共に成長できる様努めてまいります。
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!-- /section 5 -->
+
+        <!-- section 6 -->
+        <div class="section6">
+          <div class="container-fluid no-gutters">
+            <div class="row no-gutters align-items-center">
+              <div class="col-lg-6 box1 d-flex justify-content-end order-2 order-lg-1">
+                <section class="section section-content clearfix d-flex justify-content-center py-medium py-lg-0"
+                  data-arts-os-animation="data-arts-os-animation">
+                  <div class="section-content__inner">
+                    <div class="w-100"></div>
+
+                    <div class="section-content__heading" reduce-white-space>
+                      <div class="section-content__heading mb-1">
+                        <h2 class="poppins-semi-bold mb-0">成果報酬型人材サーチ</h2>
+                        <small class="h2-smal">(コンティンジェンシーサーチ)</small>
+                      </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <div class="section-content__text ">経営幹部候補、管理職及び高度なスキルを有する人材の採用を
+                    </div>
+                    <div class=" section-content__text">検討されている企業様にご提案します。業界知識及び豊富な
+                    </div>
+                    <div class="section-content__text">ネットワークを活用し、適切な人材を紹介させていただきます。
+                    </div>
+
+                    <div style="margin-bottom:15px"></div>
+                    <div class="email-section">
+                      <div class="address">
+                        <div class="inline-block">コンサルタントへメールでご相談いただけます。
+                          <span>info@spark8co.com</span>
+                        </div>
+                      </div>
+                      <div class="split-text js-split-text" data-split-text-type="lines,words"
+                        data-split-text-set="words" data-aos="fade-up" data-aos-offset="0" data-aos-easing="linear"
+                        data-aos-delay="50" data-aos-duration="1000">
+                        <div class="email-btn d-flex align-items-center">
+                          <a target="_blank" href="mailto:info@spark8co.com"><img class="email-hover"
+                              src="img/otoiawase.png" /></a>
+                          <!--div class="icon" style="--aspect-ratio: 39/32"></div>
+                        <div class="contact-us meiryo-bold">お問い合わせ</div>
+                        <div class="line"></div-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="col-lg-6 box2 order-1 order-lg-2">
+                <section class="section section-slider overflow">
+                  <div class="lazy-bg" data-src="img/clubs.png" style="--aspect-ratio: 1920/2010;"></div>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="row no-gutters align-items-center">
+            <div class="col-lg-6 d-flex justify-content-end box4 order-2">
+              <section class="section section-content d-flex justify-content-center py-medium py-lg-0"
+                data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                  <div class="w-120"></div>
+
+                  <div class="section-content__heading " reduce-white-space>
+                    <div class="section-content__heading mb-1">
+                      <h2 class="poppins-semi-bold mb-0" style="position: relative; right: 8px;">リテーナー型人材サーチ</h2>
+                    </div>
+                  </div>
+                  <div style="margin-bottom:20px"></div>
+                  <div class="w-120"></div>
+                  <!-- <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                    data-split-text-set="lines" reduce-white-space>
+                      経営戦略上重要なポジション、C-level、事業責任者及び高度なスキルを要する専門職のサーチに適しています。難易度の高いサーチを成功に導く為に、
+                      クライアント企業との多角的な協議を行い、ポジションの定義を明確にした後にサーチを開始いたします。サーチ期間中も企業との協議を重ねて参ります。
+                      コンピテンシー、スキルセット、ビジョン等貴社に必要な資質を備えた最適な人材を紹介いたします。
+                  </div> -->
+
+
+
+                  <div class="section-content__text mb-0">
+                    経営戦略上重要なポジション、C-level、事業責任者及び高度なスキルを</div>
+
+                  <div class="section-content__text  mb-0">
+                    要する専門職のサーチに適しています。難易度の高いサーチを成功に導く為に、
+                  </div>
+
+
+                  <div class="section-content__text mb-0 ">
+                    クライアント企業との多角的な協議を行い、ポジションの定義を明確にした後に
+                  </div>
+
+                  <div class="section-content__text  mb-0">
+                    サーチを開始いたします。サーチ期間中も企業との協議を重ねて参ります。
+                  </div>
+
+                  <div class="section-content__text  mb-0">
+                    コンピテンシー、スキルセット、ビジョン等貴社に必要な資質を備えた
+                  </div>
+
+                  <div class="section-content__text   mb-0">
+                    最適な人材を紹介いたします。
+                  </div>
+
+                  <!--div class="section-content__text  js-split-text mb-0 line-h-6" data-aos="fade-up" data-aos-duration="1300">
+          コンピテンシー、スキルセット、ビジョン等貴社に必要な資質を備え
+        </div>
+        <div class="section-content__text  js-split-text mb-0 line-h-6" data-aos="fade-up" data-aos-duration="1300">
+        た最適な人材を紹介いたします。
+      </div-->
+
+
+                  <div style="margin-bottom:15px"></div>
+                  <div class="email-section">
+                    <div class="address">
+                      <div class="inline-block">コンサルタントへメールでご相談いただけます。
+                        <span>info@spark8co.com</span>
+                      </div>
+                    </div>
+                    <div class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"
+                      data-aos="fade-up" data-aos-easing="linear" data-aos-delay="50" data-aos-duration="1000">
+                      <div class="email-btn d-flex align-items-center">
+                        <!--div class="icon" style="--aspect-ratio: 39/32"></div>
+                          <div class="contact-us meiryo-bold">お問い合わせ</div>
+                          <div class="line"></div-->
+                        <a target="_blank" href="mailto:info@spark8co.com"><img class="email-hover"
+                            src="img/otoiawase.png" /></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6 box3 order-1">
+              <section class="section section-slider overflow">
+                <div class="lazy-bg" data-src="img/crew.png" style="--aspect-ratio: 1921/2010;"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!-- /section 6 -->
+
+        <!-- section 7 -->
+        <section class="section7 section section-image section_h-800">
+          <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
+            <video class="of-cover" src="img/spark_v.mp4" autoplay="autoplay" playsinline="playsinline" muted="muted"
+              loop="loop"></video>
+          </div>
+        </section>
+        <!-- /section 7 -->
+
+        <!-- section 8 -->
+        <section class="section8 section"></section>
+        <!-- /section 8 -->
+        <div style="min-height:68px;background-color:#ce5a50" id="market-trends">
+        </div>
+        <!-- section 9 -->
+        <section class="section9 section section-content section-image">
+          <div class="section-content__inner">
+            <div class="section-image__wrapper">
+              <div class="lazy-bg" data-src="img/mt.png" style="--aspect-ratio: 2952/1987"></div>
+              <div class="frame lazy-bg " data-src="img/mt_on.png" style="--aspect-ratio:1494/1005"></div>
+            </div>
+            <!--div class="section-content__text js-split-text mb-0 line-h-6" data-aos="fade-up" data-aos-duration="2000">
+           デジタル化は私たちのビジネスのやり方を何年にもわたって変革して<br>	
+きており、過去20年間で多くのパラダイムシフトが起きました。	<br><br>
+	
+最近の危機であるパンデミックは、我々の働き方、コミュニケーション	<br>
+のとりかた、そして生活様式をも変えた危機であり、これにより企業と	<br>
+社員間でお互いに求めるものが変化をしました。	<br>
+そして、今後この様な変化が継続的に起きる可能性は否定できません。	<br><br>
+	
+このような環境の中で、個人および企業は絶えず自身のポテンシャルを	<br>
+最大限活かすことを考える為、市場の動向を常に把握しておくことが	<br>
+重要です。そして、この複雑な環境の中最適な社員やポジションを	<br>
+見つけることは非常に困難な場合があります。	<br><br>
+	
+現在、変革を試みる多くの企業は、革新的な技術力、組織力及び多様性を	<br>
+持った人材を必要としています。一方、この変革期において、転職を考える	<br>
+有能なリーダーやスペシャリストたちが重視するのは、企業の将来性・	<br>
+ビジョン・企業価値と考えます。	<br>
+</div-->
+            <!-- Removed SplitText because breaking formatting -->
+            <div class="section-content__text js-split-text mb-0 line-h-6 text-animation">
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="500" data-aos-duration="200">
+                デジタル化は私たちのビジネスのやり方を何年にもわたって変革して
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="470" data-aos-duration="300">
+                きており、過去20年間で多くのパラダイムシフトが起きました。
+              </div>
+              <br>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="440" data-aos-duration="400">
+                最近の危機であるパンデミックは、我々の働き方、コミュニケーション
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="410" data-aos-duration="500">
+                のとりかた、そして生活様式をも変えた危機であり、これにより企業と
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="380" data-aos-duration="600">
+                社員間でお互いに求めるものが変化をしました。
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="350" data-aos-duration="700">
+                そして、今後この様な変化が継続的に起きる可能性は否定できません。<br><br>
+              </div>
+              <br>
+
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="320" data-aos-duration="800">
+                このような環境の中で、個人および企業は絶えず自身のポテンシャルを
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="290" data-aos-duration="900">
+                最大限活かすことを考える為、市場の動向を常に把握しておくことが
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="260" data-aos-duration="1000">
+                重要です。そして、この複雑な環境の中最適な社員やポジションを
+              </div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="230" data-aos-duration="1100">
+                見つけることは非常に困難な場合があります。</div><br>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1200">
+                現在、変革を試みる多くの企業は、革新的な技術力、組織力及び多様性を</div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="170" data-aos-duration="1300">
+                持った人材を必要としています。一方、この変革期において、転職を考える</div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="140" data-aos-duration="1400">
+                有能なリーダーやスペシャリストたちが重視するのは、企業の将来性・</div>
+              <div class=" js-split-text" data-aos="fade-up" data-aos-offset="110" data-aos-duration="1500">
+                ビジョン・企業価値と考えます。
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- /section 9 -->
+        <div style="min-height:70px;background-color:#ecebe8" id="industry-occupation">
+        </div>
+        <!-- section 10 -->
+        <section class="section10 section section-image ">
+          <div class="office">
+            <div class="office__content">
+              <figure>
+                <img src="img/office.png" class="img-office" alt="">
+              </figure>
+              <div class="office__row text-animation">
+                <div class="title section-content__inner">
+                  <div class="section__headline"></div>
+                  <h1 class="meiryo-bold split-text js-split-text" data-split-text-type="lines,words"
+                    data-split-text-set="words">業界・職種</h1>
+                </div>
+                <div class="box-icons">
+                  <div class="icon-item">
+                    <div data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                      <img src="./img/icon_1.png" class="icon-img">
+                    </div>
+                    <img src="./img/icon-text-1.png" class="icon-text">
+                  </div>
+                  <div class="icon-item">
+                    <div data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                      <img src="./img/icon_2.png" class="icon-img icon-2">
+                    </div>
+                    <img src="./img/icon-text-2.png" class="icon-text text-icon-2">
+                  </div>
+                  <div class="icon-item">
+                    <div data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                      <img src="./img/icon_3.png" class="icon-img icon-3">
+                    </div>
+                    <img src="./img/icon-text-3.png" class="icon-text text-icon-3">
+                  </div>
+                  <div class="icon-item">
+                    <div data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                      <img src="./img/icon_4.png" class="icon-img">
+                    </div>
+                    <img src="./img/icon-text-4.png" class="icon-text">
+                  </div>
+                  <div class="icon-item">
+                    <div data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                      <img src="./img/icon_5.png" class="icon-img">
+                    </div>
+                    <img src="./img/icon-text-5.png" class="icon-text">
+                  </div>
+                  <div class="icon-item">
+                    <div data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+                      data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+                      <img src="./img/icon_6.png" class="icon-img">
+                    </div>
+                    <img src="./img/icon-text-6.png" class="icon-text">
+                  </div>
+                </div>
+
+                <div class="box-description" id="consultanttop">
+                  <ul class="meriyo split-text js-split-text" data-split-text-type="lines" data-split-text-set="lines"
+                    reduce-white-space>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>CEO / COO / CIO / CISO / BOD</span>
+                    </li>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>経営企画･経営戦略</span></li>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>ガバナンス･リスク･コンプライアンス･ サイバーセキュリティー</span> </li>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>IT･戦略コンサルタント データサイエンス･データ分析･クオンツ</span> </li>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>破壊的技術･破壊的イノベーション (AI,Blockchain,IoT,RPA他)</span></li>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>セールス･マーケティング</span></li>
+                    <li class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                      <span class="circle"></span><span>コーポレートファイナンス</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /section 10 -->
+        <div style="min-height:70px;background-color:#ecebe8" id="consultant">
+        </div>
+        <!-- section 13 -->
+        <section class="section13 section">
+          <div class="row">
+            <div class="col-12 d-flex flex-column justify-content-end">
+              <div class="consultant-box">
+                <img class="consultant-shadow" src="img/consultant-shadow.png" alt="consultant" />
+                <img class="consultant" src="img/consultant.png" alt="consultant" />
+              </div>
+              <!-- <div class="seita-san section-image" style="--aspect-ratio: 689/572;opacity:0.8">
+                <div class="lazy-bg" data-src="img/seita-san-grey.png"></div>
+              </div> -->
+              <div class="seita-san-consultant"></div>
+              <div class="info section-content">
+                <div class="row no-gutters">
+                  <div class="left col-12 col-lg-6 col-xl-5 row d-flex justify-content-center no-gutters">
+                    <div class="title noto-bold split-text js-split-text tl_t_in" data-split-text-type="lines,words"
+                      data-split-text-set="words" data-reduce-white-space>
+                      コンサルタント
+                    </div>
+
+                    <div class="president split-text js-split-text tr_t_in" data-split-text-type="lines,words"
+                      data-split-text-set="words" data-reduce-white-space>
+                      <div class="shacho noto">
+                        代表取締役社長
+                      </div>
+                      <div class="name noto-bold">
+                        朴　成太
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-6 col-xl-7 background-info split-text js-split-text"
+                    data-split-text-type="lines" data-split-text-set="lines">
+                    ４大監査法人デロイトアンドトゥーシュトーマツ（カナダ、バンクーバー事務所）でキャリアをスタートし、IT企業、
+                    貿易会社、金融機関等の外部監査を担当。その後、日本に帰国しトムソンロイター（旧トムソンファイナンシャル）、
+                    ジェフリーズ証券、MF&nbsp;Global証券に在籍後、独立系エグゼクティブサーチファームに転職し、AI・ブロックチェーン・
+                    データアナリティクス・GRC・FinTech・バンキング・ファイナンス領域のシニア案件に従事。
+                    2019年にSpark &Co.株式会社を設立。ヴィクトリア大学卒業（カナダ）商学部国際ビジネス学科(BCom)
+                  </div>
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /section13 -->
+        <div style="min-height:68px;background-color:#ecebe8" id="changing-jobs">
+        </div>
+        <!-- section 14 -->
+        <section class="section14 container-fluid no-gutters">
+          <div class="row no-gutters align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <section class="section section-content" data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner plr-18">
+                  <div class="w-100"></div>
+                  <div class="section__headline"></div>
+                  <div class="w-100"></div>
+                  <div class="section-content__heading split-text js-split-text" data-split-text-type="lines,words"
+                    data-split-text-set="words">
+                    <h2 class="heading noto-bold">転職をお考えの方</h2>
+                  </div>
+                  <div style="margin-bottom:20px"></div>
+                  <div class="w-100"></div>
+                  <!--div class="section-content__text split-text js-split-text size-job" data-split-text-type="lines"
+                    data-split-text-set="lines"-->
+                  <div class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"
+                    data-aos="fade-up" data-aos-offset="0" data-aos-easing="linear" data-aos-delay="50"
+                    data-aos-duration="1000">
+                    <p class="text">
+                      下記メールアドレス宛にご連絡をお願い致します。お問い合わせをいただきます際は、お名前、連絡先（メールアドレスまたは電話）、希望転職先や転職を希望されている背景などをお教え下さい。また、面談ご希望の方は、その旨お知らせ下さい。
+                    </p>
+                  </div>
+                  <div class="email-section">
+                    <div class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"
+                      data-aos="fade-up" data-aos-offset="0" data-aos-easing="linear" data-aos-delay="50"
+                      data-aos-duration="1000">
+                      <div class="address">
+                        <div class="inline-block">コンサルタントへメールでご相談いただけます。
+                          <span>info@spark8co.com</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words"
+                      data-aos="fade-up" data-aos-offset="0" data-aos-easing="linear" data-aos-delay="50"
+                      data-aos-duration="1000">
+                      <div class="email-btn d-flex align-items-center">
+                        <!--div class="icon" style="--aspect-ratio: 39/32"></div>
+                          <div class="contact-us meiryo-bold">お問い合わせ</div>
+                          <div class="line"></div-->
+                        <a target="_blank" href="mailto:info@spark8co.com"><img class="email-hover"
+                            src="img/otoiawase.png" /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="start-up section-content__text split-text js-split-text"
+                    data-split-text-type="lines,words" data-split-text-set="words" data-aos="fade-up"
+                    data-aos-offset="0" data-aos-easing="linear" data-aos-delay="50" data-aos-duration="1000">
+                    スタートアップ企業から大手企業まで、規模・業界・国籍を問わず、候補者様のキャリア形成をサポートさせて頂きます。
+                  </div>
+                  <div class="process d-none d-md-block" data-aos="fade-up" data-aos-offset="0" data-aos-easing="linear"
+                    data-aos-delay="50" data-aos-duration="1000">
+                    <img src="img/process.png" alt="プロセス">
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6 order-lg-1">
+              <section class="section-image">
+                <div class="section-image__wrapper" style="--aspect-ratio: 1920/1920"
+                  data-arts-parallax="data-arts-parallax" data-arts-parallax-factor="0.15">
+                  <div class="lazy-bg" data-src="img/shaking-hands.png"></div>
+                </div>
+                <div class="fine-print d-flex justify-content-center align-items-center">
+                  <div class="d-none d-md-block">
+                    ※ご登録者様から料金を頂くことはございません。※ご登録をされます際は、履歴書、職務経歴書（和文又は英文）をお預かりする事となります。
+                    ※弊社データベースへの登録をご希望の方は、弊社のサービス内容及び個人情報の取り扱いに関します説明をさせていただいた後、登録プロセスへ進ませていただきます。
+                    ※個人情報の管理は厳重に行っております。ご本人の了解なくして第三者に開示をしたり、求人中の企業などに提供することはございません。<a href="./privacy-policy.html"
+                      class="spark-orange inline-block">個人情報の取り扱いについて</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <!-- /section 14 -->
+      </main>
+
+      <!-- PAGE FOOTER -->
+      <footer>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12 links">
+              <div class="row">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#top">HOME</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#corporate-philosophy">企業理念</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#company-profile">会社概要</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#location">アクセス</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#service">サービス</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#market-trends">マーケットトレンド</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#industry-occupation">業界･職種</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#consultant">コンサルタント</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="#changing-jobs">転職をお考えの方</a>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-auto">
+                  <a href="privacy-policy.html">プライバシーポリシー</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 spark-logo d-flex justify-content-center">
+              <img src="img/logo.svg" alt="SPARK & CO." />
+            </div>
+
+            <div class="col-12 copyright roboto-light">
+              2021 © Spark & Co. Ltd.
+            </div>
+
+            <a href="#top" class="scroll-btn">
+              <svg xmlns="https://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 5.292 4.762">
+                <path d="M2.673.012l2.619 4.753-5.305-.008L1.33 2.385z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+      <!-- - PAGE FOOTER -->
+
+    </div>
+    <!-- - PAGE MAIN -->
+  </div>
+  <canvas id="js-webgl"></canvas>
+  <!-- PhotoSwipe -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" data-arts-theme-text="light">
+    <!-- background -->
+    <div class="pswp__bg"></div>
+    <!-- - background -->
+    <!-- slider wrapper -->
+    <div class="pswp__scroll-wrap">
+      <!-- slides holder (don't modify)-->
+      <div class="pswp__container">
+        <div class="pswp__item">
+          <div class="pswp__img pswp__img--placeholder"></div>
+        </div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <!-- - slides holder (don't modify)-->
+      <!-- UI -->
+      <div class="pswp__ui pswp__ui--hidden">
+        <!-- top bar -->
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)" data-arts-cursor="data-arts-cursor"
+            data-arts-cursor-scale="1.2" data-arts-cursor-magnetic="data-arts-cursor-magnetic"
+            data-arts-cursor-hide-native="true"></button>
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen" data-arts-cursor="data-arts-cursor"
+            data-arts-cursor-scale="1.2" data-arts-cursor-magnetic="data-arts-cursor-magnetic"
+            data-arts-cursor-hide-native="true"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- - top bar -->
+        <!-- left arrow -->
+        <div class="pswp__button pswp__button--arrow--left">
+          <div class="arrow arrow-left js-arrow" data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true"
+            data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+            <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+              xmlns:xlink="https://www.w3.org/1999/xlink">
+              <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+            </svg>
+            <div class="arrow__pointer arrow-left__pointer"></div>
+            <div class="arrow__triangle"></div>
+          </div>
+        </div>
+        <!-- - left arrow -->
+        <!-- right arrow -->
+        <div class="pswp__button pswp__button--arrow--right">
+          <div class="arrow arrow-right js-arrow" data-arts-cursor="data-arts-cursor"
+            data-arts-cursor-hide-native="true" data-arts-cursor-scale="0"
+            data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+            <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+              xmlns:xlink="https://www.w3.org/1999/xlink">
+              <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+            </svg>
+            <div class="arrow__pointer arrow-right__pointer"></div>
+            <div class="arrow__triangle"></div>
+          </div>
+        </div>
+        <!-- - right arrow -->
+        <!-- slide caption holder (don't modify) -->
+        <div class="pswp__caption">
+          <div class="pswp__caption__center text-center"></div>
+        </div>
+        <!-- - slide caption holder (don't modify) -->
+      </div>
+      <!-- - UI -->
+    </div>
+    <!-- slider wrapper -->
+  </div>
+  <!-- - PhotoSwipe -->
+
+  <!-- List Hover Shaders -->
+  <script id="list-hover-vs" type="x-shader/x-vertex">
+    uniform vec2 uOffset;
+
+      varying vec2 vUv;
+
+      vec3 deformationCurve(vec3 position, vec2 uv, vec2 offset) {
+        float M_PI = 3.1415926535897932384626433832795;
+        position.x = position.x + (sin(uv.y * M_PI) * offset.x);
+        position.y = position.y + (sin(uv.x * M_PI) * offset.y);
+        return position;
+      }
+
+      void main() {
+        vUv =  uv + (uOffset * 2.);
+        vec3 newPosition = position;
+        newPosition = deformationCurve(position,uv,uOffset);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( newPosition, 1.0 );
+      }
+    </script>
+  <script id="list-hover-fs" type="x-shader/x-fragment">
+    uniform sampler2D uTexture;
+      uniform float uAlpha;
+      uniform float uScale;
+
+      varying vec2 vUv;
+
+      vec2 scaleUV(vec2 uv,float scale) {
+        float center = 0.5;
+        return ((uv - center) * scale) + center;
+      }
+
+      void main() {
+        vec3 color = texture2D(uTexture,scaleUV(vUv,uScale)).rgb;
+        gl_FragColor = vec4(color,uAlpha);
+      }
+
+    </script>
+  <!-- - List Hover Shaders -->
+  <!-- Slider Textures Shaders -->
+  <script id="slider-textures-vs" type="x-shader/x-vertex">
+    varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+      }
+    </script>
+  <script id="slider-textures-horizontal-fs" type="x-shader/x-fragment">
+    varying vec2 vUv;
+
+      uniform sampler2D texture;
+      uniform sampler2D texture2;
+      uniform sampler2D disp;
+
+      uniform float dispFactor;
+      uniform float effectFactor;
+
+      void main() {
+
+        vec2 uv = vUv;
+
+        vec4 disp = texture2D(disp, uv);
+
+        vec2 distortedPosition = vec2(uv.x + dispFactor * (disp.r*effectFactor), uv.y);
+        vec2 distortedPosition2 = vec2(uv.x - (1.0 - dispFactor) * (disp.r*effectFactor), uv.y);
+
+        vec4 _texture = texture2D(texture, distortedPosition);
+        vec4 _texture2 = texture2D(texture2, distortedPosition2);
+
+        vec4 finalTexture = mix(_texture, _texture2, dispFactor);
+
+        gl_FragColor = finalTexture;
+
+      }
+    </script>
+  <script id="slider-textures-horizontal-fs" type="x-shader/x-fragment">
+    varying vec2 vUv;
+
+      uniform sampler2D texture;
+      uniform sampler2D texture2;
+      uniform sampler2D disp;
+
+      uniform float dispFactor;
+      uniform float effectFactor;
+
+      void main() {
+
+        vec2 uv = vUv;
+
+        vec4 disp = texture2D(disp, uv);
+
+        vec2 distortedPosition = vec2(uv.x, uv.y - dispFactor * (disp.r*effectFactor));
+        vec2 distortedPosition2 = vec2(uv.x, uv.y + (1.0 - dispFactor) * (disp.r*effectFactor));
+
+        vec4 _texture = texture2D(texture, distortedPosition);
+        vec4 _texture2 = texture2D(texture2, distortedPosition2);
+
+        vec4 finalTexture = mix(_texture, _texture2, dispFactor);
+
+        gl_FragColor = finalTexture;
+
+      }
+
+    </script>
+  <!-- - Slider Textures Shaders -->
+  <!-- VENDOR SCRIPTS -->
+  <script src="js/vendor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+  <!-- - VENDOR SCRIPTS -->
+  <!-- COMPONENTS -->
+  <script src="js/components.js"></script>
+  <!-- - COMPONENTS -->
+  <script src="js/animations.js"></script>
+  <!--script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script-->
+  <script>
+  console.log("firstaos");
+    /*AOS.init({
+      once: true
+    });*/
+    let cnt = 0;
+    var observer = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true && cnt==0){
+    cnt = 1
+		handleLinkMenu();
+  }
+}, { threshold: [1] });
+
+observer.observe(document.querySelector("#consultanttop"));
+        
+
+    function handleLinkMenu() {
+      console.log("indexlink");
+     //  AOS.refresh();
+       /* AOS.init({
+          once: true
+        });*/
+      if (cnt!=0){
+    //  setTimeout(() => {
+        gsap.to(".section9 .frame", {
+          duration: 1.2,
+          ease: "power2.in",
+          opacity: 1,
+          scrollTrigger: {
+            trigger: document.querySelector(".section9 .frame"),
+            start: "+=0", //"top center",
+          },
+        });
+        // Consultant animation
+        gsap.to(".section13 .consultant-box", {
+          duration: 1,
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".section13 .info.section-content",
+            start: "top bottom",
+          },
+        });
+        gsap.from(".section13 .consultant", {
+          duration: 1,
+          xPercent: -10,
+          yPercent: -10,
+          scrollTrigger: {
+            trigger: ".section13 .info.section-content",
+            start: "top bottom",
+          },
+        });
+
+        gsap.from(".section13 .consultant-shadow", {
+          duration: 1,
+          xPercent: -14,
+          yPercent: -50,
+          scrollTrigger: {
+            trigger: ".section13 .info.section-content",
+            start: "top bottom",
+          },
+        });
+ //     }, 300);
+      }
+    }
+
+  </script>
+</body>
+
+</html>
